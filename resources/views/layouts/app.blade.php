@@ -196,7 +196,15 @@
             background: white;
             border-top: 1px solid #e5e7eb;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-height: calc(100vh - 5.5rem);
+            max-height: calc(100dvh - 5.5rem);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            scrollbar-width: thin;
         }
+        .navbar-mobile-menu::-webkit-scrollbar { width: 6px; }
+        .navbar-mobile-menu::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
         .navbar-mobile-nav {
             display: flex;
             flex-direction: column;
@@ -743,11 +751,28 @@
             if (mobileMenu.classList.contains('hidden')) {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
             } else {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
+                const headerHeight = navbar.offsetHeight;
+                mobileMenu.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+                mobileMenu.style.maxHeight = `calc(100dvh - ${headerHeight}px)`;
+                document.body.style.overflow = 'hidden';
             }
         }
+
+        // Close mobile menu when clicking a link inside it
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const icon = document.getElementById('mobileMenuIcon');
+                mobileMenu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            });
+        });
 
         // ============================================
         // ANNOUNCEMENT BAR
@@ -755,6 +780,13 @@
         function closeAnnouncement() {
             announcementBar.style.display = 'none';
             headerSpacer.style.height = '4.5rem';
+
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (!mobileMenu.classList.contains('hidden')) {
+                const headerHeight = navbar.offsetHeight;
+                mobileMenu.style.maxHeight = `calc(100vh - ${headerHeight}px)`;
+                mobileMenu.style.maxHeight = `calc(100dvh - ${headerHeight}px)`;
+            }
         }
 
         // ============================================
