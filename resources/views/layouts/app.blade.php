@@ -525,47 +525,47 @@
             <div id="mobileMenu" class="navbar-mobile-menu hidden md:hidden mt-4">
                 <div class="navbar-mobile-nav">
                     <!-- Products Banner -->
-                    <a href="{{ route('products') }}" class="menu-banner">
+                    {{-- <a href="{{ route('products') }}" class="menu-banner">
                         <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=80" alt="Products">
                         <div class="menu-banner-overlay">
                             <div class="menu-banner-title">Smart Home Products</div>
                             <div class="menu-banner-subtitle">Premium Quality Solutions</div>
                             <div class="menu-banner-cta">Explore Now <i class="fas fa-arrow-right"></i></div>
                         </div>
-                    </a>
+                    </a> --}}
 
                     <!-- Articles Banner -->
-                    <a href="{{ route('articles') }}" class="menu-banner">
+                    {{-- <a href="{{ route('articles') }}" class="menu-banner">
                         <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80" alt="Articles">
                         <div class="menu-banner-overlay">
                             <div class="menu-banner-title">Articles & Insights</div>
                             <div class="menu-banner-subtitle">Expert Tips & News</div>
                             <div class="menu-banner-cta">Read More <i class="fas fa-arrow-right"></i></div>
                         </div>
-                    </a>
+                    </a> --}}
 
                     <!-- Services Banner -->
-                    <a href="{{ route('services') }}" class="menu-banner">
+                    {{-- <a href="{{ route('services') }}" class="menu-banner">
                         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Services">
                         <div class="menu-banner-overlay">
                             <div class="menu-banner-title">Our Services</div>
                             <div class="menu-banner-subtitle">Construction & Renovation</div>
                             <div class="menu-banner-cta">View Services <i class="fas fa-arrow-right"></i></div>
                         </div>
-                    </a>
+                    </a> --}}
 
                     <!-- Portfolio Banner -->
-                    <a href="{{ route('portfolio') }}" class="menu-banner">
+                    {{-- <a href="{{ route('portfolio') }}" class="menu-banner">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Portfolio">
                         <div class="menu-banner-overlay">
                             <div class="menu-banner-title">Our Portfolio</div>
                             <div class="menu-banner-subtitle">Completed Projects</div>
                             <div class="menu-banner-cta">View Gallery <i class="fas fa-arrow-right"></i></div>
                         </div>
-                    </a>
+                    </a> --}}
 
                     <!-- Contact Banner -->
-                    <a href="{{ route('contact') }}" class="menu-banner">
+                    {{-- <a href="{{ route('contact') }}" class="menu-banner">
                         <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=600&q=80" alt="Contact">
                         <div class="menu-banner-overlay">
                             <div class="menu-banner-title">Contact Us</div>
@@ -574,7 +574,7 @@
                         </div>
                     </a>
 
-                    <div class="border-t border-gray-200 my-2"></div>
+                    <div class="border-t border-gray-200 my-2"></div> --}}
 
                     <a href="{{ route('home') }}" class="navbar-mobile-link {{ request()->routeIs('home') ? 'active' : '' }}">
                         <i class="fas fa-home"></i>Home
