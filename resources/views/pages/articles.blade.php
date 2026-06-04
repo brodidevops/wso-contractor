@@ -7,10 +7,10 @@
 <!-- Page Header -->
 <section class="gradient-primary py-32 hero-pattern">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Articles & Insights</h1>
-        <p class="text-xl text-gray-200 max-w-2xl mx-auto">Expert tips, industry news, and construction insights from our professional team</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6">Articles & Insights</h1>
+        <p class="text-xl text-black-200 max-w-2xl mx-auto">Expert tips, industry news, and construction insights from our professional team</p>
         <div class="flex justify-center mt-8 space-x-2">
-            <a href="{{ route('home') }}" class="text-gray-300 hover:text-white transition">Home</a>
+            <a href="{{ route('home') }}" class="text-gray-300 hover:text-black transition">Home</a>
             <span class="text-gray-400">/</span>
             <span class="text-amber-400">Articles</span>
         </div>
